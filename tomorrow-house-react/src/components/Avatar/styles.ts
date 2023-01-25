@@ -10,6 +10,7 @@ export const StyledAvatar = styled.div<StyledAvatarProps>`
   width: ${({ size }) => (size === 'small' ? '24px' : '32px')};
   height: ${({ size }) => (size === 'small' ? '24px' : '32px')};
   overflow:hidden;
+  background-image: url('./assets/images/img-user-default.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
