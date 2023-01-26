@@ -12,7 +12,7 @@ import { StyledFormControl, StyledFormGroup } from 'src/components/Forms/styles'
 interface InputProps {
   type: React.HTMLInputTypeAttribute
   value: string | number
-  className: string
+  className?: string
   active?: boolean
   children?: ReactNode
   disabled?: boolean
