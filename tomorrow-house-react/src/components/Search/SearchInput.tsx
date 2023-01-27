@@ -3,7 +3,7 @@ import { useRouter } from 'src/hooks/useRouter'
 import { useAppDispatch } from 'src/hooks'
 import { getSearchQueryUrl } from '../utils'
 import { setSearchHistory } from 'src/app/searchHistory'
-import { SearchIcon } from 'src/assets/icons'
+// import { SearchIcon } from 'src/assets/icons'
 import { Input } from 'src/components/Forms/Input'
 
 interface SearchInputProps {
@@ -53,7 +53,7 @@ export const SearchInput: React.FC<SearchInputProps> = ({
       onKeyPress={handleEnter}
     >
       <button>
-        <SearchIcon />
+        {/* <SearchIcon /> */}
       </button>
     </Input>
   )

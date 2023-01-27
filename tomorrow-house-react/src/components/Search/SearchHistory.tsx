@@ -7,7 +7,7 @@ import {
   setSearchHistory,
 } from 'src/app/searchHistory'
 import { useAppDispatch, useAppSelector } from 'src/hooks'
-import { SearchHistoryItem } from 'src/components/Search/SearchHIstoryItem'
+import { SearchHistoryItem } from 'src/components/Search/SearchHistoryItem'
 
 interface SearchHistoryProps {
   className?: string

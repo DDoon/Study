@@ -5,7 +5,7 @@ export type AvatarSize = 'big' | 'small'
 
 export interface AvatarProps {
   username: string
-  className: string
+  className?: string
   to?: string
   image?: string
   size?: AvatarSize

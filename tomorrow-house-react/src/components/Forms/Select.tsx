@@ -12,7 +12,7 @@ import {
   StyledSelectGroup,
   StyledFormControl,
 } from 'src/components/Forms/styles'
-import { CaretIcon } from 'src/assets/icons'
+// import { CaretIcon } from 'src/assets/icons'
 
 interface SelectProps {
   id: string | number
@@ -95,7 +95,7 @@ export const Select: React.FC<SelectProps> = ({
           )
         })}
       </StyledFormControl>
-      <CaretIcon className="icon" />
+      {/* <CaretIcon className="icon" /> */}
     </StyledSelectGroup>
   )
 }

@@ -6,7 +6,7 @@ import React, {
   KeyboardEvent,
   MouseEvent,
 } from 'react'
-import { SearchIcon } from 'src/assets/icons'
+// import { SearchIcon } from 'src/assets/icons'
 import { StyledFormControl, StyledFormGroup } from 'src/components/Forms/styles'
 
 interface InputProps {
@@ -31,7 +31,7 @@ interface InputProps {
 function getInputIcon(icon: string) {
   switch (icon) {
     case 'search':
-      return <SearchIcon className="icon" />
+      // return <SearchIcon className="icon" />
     default:
       return null
   }

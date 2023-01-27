@@ -1,7 +1,10 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
+import searchHistory from './searchHistory'
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    searchHistory,
+  },
 })
 
 export type AppDispatch = typeof store.dispatch

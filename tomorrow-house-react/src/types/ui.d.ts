@@ -3,3 +3,8 @@ declare interface SelectOption {
   value: string | number
   disabled?: boolean
 }
+
+declare interface SearchHistory {
+  content: string
+  createdAt: number
+}

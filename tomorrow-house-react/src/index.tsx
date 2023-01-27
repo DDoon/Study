@@ -7,6 +7,9 @@ import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './globalStyle'
 import { theme } from './styles'
 import { Route, BrowserRouter } from 'react-router-dom'
+import Routes from './Routes'
+
+const container = document.getElementById('root')
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
@@ -15,7 +18,7 @@ root.render(
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <Route />
+          <App />
         </ThemeProvider>
       </BrowserRouter>
     </Provider>

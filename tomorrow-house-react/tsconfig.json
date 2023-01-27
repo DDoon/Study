@@ -1,12 +1,6 @@
 {
+  "extends": "./tsconfig.paths.json",
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "src": ["src/*"],
-      "components": ["src/components/*"],
-      "images": ["src/images/*"],
-      "styles": ["src/styles.scss"]
-    },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -23,5 +17,11 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "src/types/svg.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.svg"
+  ]
 }

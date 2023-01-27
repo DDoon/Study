@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { StyledSearchHistoryItem } from './styles'
 import { getSearchQueryUrl } from '../utils'
-import { CloseIcon } from 'src/assets/icons'
+// import { CloseIcon } from 'src/assets/icons'
 
 interface SearchHistoryItemProps {
   history: SearchHistory
@@ -33,7 +33,7 @@ export const SearchHistoryItem: React.FC<SearchHistoryItemProps> = ({
         onClick={deleteItem}
         aria-label="검색어 삭제"
       >
-        <CloseIcon />
+        {/* <CloseIcon /> */}
       </button>
     </StyledSearchHistoryItem>
   )
