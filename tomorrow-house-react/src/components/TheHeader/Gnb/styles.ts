@@ -19,24 +19,24 @@ export const GNB_HEIGHT_LG = `80px`
 
 export const StyledGnb = styled.div`
   width: 100%;
-  height: ${GNB_HEIGHT_SM}
-  background-color: ${({ theme }) => theme.colors.white}
-  border-bottom: 1px solid ${({ theme }) => theme.colors.border}
+  height: ${GNB_HEIGHT_SM};
+  background-color: ${({ theme }) => theme.colors.white};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 
   .gnb-wrapper {
     ${flexbox('between')};
-    position:relative;
-    width:100%;
-    height:${GNB_HEIGHT_SM};
+    position: relative;
+    width: 100%;
+    height: ${GNB_HEIGHT_SM};
   }
 
   .gnb-left {
     .logo {
       ${positionCenter()}
     }
-    
+
     a {
-      display:block;
+      display: block;
     }
 
     svg {
@@ -45,6 +45,46 @@ export const StyledGnb = styled.div`
       height: 20px;
     }
   }
+
+  .gnb-right {
+    .button-group {
+      ${flexbox('end')};
+    }
+  }
+
+  ${media.greaterThan('tablet')`
+    height: ${GNB_HEIGHT_LG};
+
+    .gnb-wrapper {
+      height: ${GNB_HEIGHT_LG};
+    }
+    
+    .gnb-left {
+      ${flexbox('start')};
+
+      .logo {
+        position: static;
+        padding-right: 32px;
+        transfrom: none;
+
+        svg {
+          height: 24px;
+        }
+      }
+    }
+
+    .gnb-right {
+      ${flexbox('end')};
+
+      .button-group {
+        margin-right: 24px;
+      }
+
+      .gnb-icon-button {
+        margin-right: 8px;
+      }
+    }
+  `}
 `
 
 export const StyledGnbNav = styled.nav`
@@ -121,7 +161,7 @@ export const StyledGnbIconButton = styled.button`
   transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
 
   &.menu {
-    color: ${({ theme }) => theme.colors.blue}
+    color: ${({ theme }) => theme.colors.blue};
     
     &:active {
       color: ${({ theme }) => theme.colors.blueDark};
@@ -154,7 +194,7 @@ export const StyledGnbIconButton = styled.button`
     letter-spacing: -0.01em;
     color: ${({ theme }) => theme.colors.white};
     text-align: center;
-    backgroud-color: ${({ theme }) => theme.colors.red}
+    backgroud-color: ${({ theme }) => theme.colors.red};
     border-radius: ${stripPx(GNB_ICON_BUTTON_BADGE) / 2}px;
   }
 

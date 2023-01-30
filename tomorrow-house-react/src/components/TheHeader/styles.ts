@@ -9,7 +9,7 @@ import {
 } from 'src/components/TheHeader/Gnb/styles'
 import styled from 'styled-components'
 
-export const StyledTheHeader = styled.div`
+export const StyledTheHeader = styled.header`
   width: 100%:
   height:${stripPx(GNB_HEIGHT_SM) + stripPx(LNB_HEIGHT_SM)}px;
 

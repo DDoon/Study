@@ -1,8 +1,11 @@
+import * as React from 'react'
 import { visuallyHidden } from 'src/styles/utils'
 import { createGlobalStyle } from 'styled-components'
+import reset from 'styled-reset'
 
 export const GlobalStyle = createGlobalStyle`
-  * {
+  ${reset}
+* {
     margin: 0;
     font-family: ${({ theme }) => theme.fontFamilies.main}; 
     -moz-osx-font-smoothing: grayscale;
@@ -13,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   html {
     font-family: ${({ theme }) => theme.fontFamilies.main};
     font-size: ${({ theme }) => theme.fontSizes.base};    
-    letter-spacing: ${({ theme }) => theme.fontSizes.base};
+    letter-spacing: ${({ theme }) => theme.letterSpacings.base};
   }
 
   body {

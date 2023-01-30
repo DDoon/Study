@@ -7,7 +7,7 @@ const TheFooter: React.FC = () => {
   return (
     <StyledGlobalFooter>
       <Grid sm={4}>
-        <h3>
+        <h3 className="global-footer-title">
           고객센터
           {/* <ChevronIcon /> */}
         </h3>
@@ -20,7 +20,7 @@ const TheFooter: React.FC = () => {
           평일 09:00 ~ 18:00 (주말 & 공휴일 제외)
         </p>
 
-        <dl>
+        <dl className="global-footer-detail">
           <div>
             <dt>상호명</dt>
             <dd>버그가 너무많아</dd>

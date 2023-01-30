@@ -72,13 +72,8 @@ export const TheHeader: React.FC = () => {
 
   return (
     <StyledTheHeader className={nestedClassName}>
-      <div>
         <Gnb className="gnb-layout" />
-      </div>
-
-      <div>
         <Lnb className="lnb-laytout" />
-      </div>
     </StyledTheHeader>
   )
 }

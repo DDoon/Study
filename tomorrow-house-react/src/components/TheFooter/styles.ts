@@ -1,5 +1,5 @@
-import { flexbox, media, textStyle } from 'src/styles/utils'
 import styled from 'styled-components'
+import { flexbox, media, textStyle } from 'src/styles/utils'
 
 export const StyledGlobalFooter = styled.footer`
   padding-top: 32px;
@@ -25,9 +25,9 @@ export const StyledGlobalFooter = styled.footer`
     color: ${({ theme }) => theme.colors.dark};
   }
 
-  .global-footer-contact {
+  .global-footer-time {
     ${textStyle('xxs')};
-    margin-bottom: 24px
+    margin-bottom: 24px;
     color: ${({ theme }) => theme.colors.primary};
   }
 
@@ -35,7 +35,7 @@ export const StyledGlobalFooter = styled.footer`
     font-size: 10px;
     line-height: 16px;
     letter-spacing: -0.01em;
-    color:${({ theme }) => theme.colors.secondary}
+    color:${({ theme }) => theme.colors.secondary};
     
     div {
       ${flexbox('start')};
@@ -50,6 +50,7 @@ export const StyledGlobalFooter = styled.footer`
       }
     }
   }
+
   ${media.greaterThan('desktop')`
     margin-bottom: 0;
     

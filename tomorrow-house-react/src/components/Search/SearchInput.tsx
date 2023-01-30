@@ -1,8 +1,6 @@
 import React, { useState, ChangeEvent, KeyboardEvent } from 'react'
 import { useRouter } from 'src/hooks/useRouter'
-import { useAppDispatch } from 'src/hooks'
 import { getSearchQueryUrl } from '../utils'
-import { setSearchHistory } from 'src/app/searchHistory'
 // import { SearchIcon } from 'src/assets/icons'
 import { Input } from 'src/components/Forms/Input'
 
@@ -17,7 +15,6 @@ export const SearchInput: React.FC<SearchInputProps> = ({
   onFocus,
   onSubmit,
 }) => {
-  const dispatch = useAppDispatch()
   const { navigate } = useRouter()
   const [value, setValue] = useState('')
 
@@ -32,7 +29,6 @@ export const SearchInput: React.FC<SearchInputProps> = ({
 
   const handleSubmit = () => {
     postSubmit()
-    dispatch(setSearchHistory(value))
     setValue('')
     if (onSubmit) onSubmit()
   }

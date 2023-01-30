@@ -4,8 +4,8 @@ import { theme } from '../index'
 export function textStyle(size: TypograpyhScale) {
   return css`
     font-size: ${theme.fontSizes[size]};
-    line-height: ${theme.fontSizes[size]};
-    letter-spacing: ${theme.fontSizes[size]};
+    line-height: ${theme.lineHeights[size]};
+    letter-spacing: ${theme.letterSpacings[size]};
   `
 }
 

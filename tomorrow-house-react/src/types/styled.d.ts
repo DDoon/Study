@@ -60,12 +60,12 @@ declare module 'styled-components' {
       [key: string]: number
     }
 
+    gutter: string
+
     boxShadows: {
       dropdown: string
       popup: string
       popupReversed: string
     }
-
-    gutter: string
   }
 }

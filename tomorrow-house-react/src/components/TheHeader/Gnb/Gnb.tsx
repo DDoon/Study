@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
 //   CartIcon,
 //   ChevronIcon,
 // } from 'src/assets/icons/index'
-import { useAppSelector, useResponsive } from 'src/hooks'
+import { useResponsive } from 'src/hooks'
 import { GnbNav } from 'src/components/TheHeader/Gnb/GnbNav'
 import { GnbSearch } from 'src/components/TheHeader/Gnb/GnbSearch'
 import { Button } from 'src/components/Button/Button'
@@ -32,9 +32,7 @@ export const Gnb: React.FC<GnbProps> = ({ className }) => {
         <div className="gnb-wrapper">
           <div className="gnb-left">
             <h1 className="logo">
-              <Link to="/">
-                {/* <Logo /> */}
-              </Link>
+              <Link to="/">{/* <Logo /> */}</Link>
             </h1>
 
             {!isMobile ? (

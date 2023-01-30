@@ -3,43 +3,43 @@ import styled, { css } from 'styled-components'
 import { textStyle, inlineFlexbox } from 'src/styles/utils'
 
 const primaryButtonStyle = css`
-  color: ${({ theme }) => theme.colors.white}
-  background-color: ${({ theme }) => theme.colors.blue}
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.blue};
   transition:background-color 200ms ease-in-out;
 
   &:not(:disabled):hover {
-    background-color: ${({ theme }) => theme.colors.blueDark}
+    background-color: ${({ theme }) => theme.colors.blueDark};
   }
 `
 
 const secondaryButtonStyle = css`
-  color: ${({ theme }) => theme.colors.primary}
-  background-color: ${({ theme }) => theme.colors.border}
+  color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.border};
   transition:background-color 200ms ease-in-out;
 
   &:not(:disabled):hover {
-    background-color: ${({ theme }) => theme.colors.tertiary}
+    background-color: ${({ theme }) => theme.colors.tertiary};
   }
 `
 
 const outlinedButtonStyle = css`
-  color: ${({ theme }) => theme.colors.blue}
-  background-color: ${({ theme }) => theme.colors.white}
-  border: 1px solid ${({ theme }) => theme.colors.blue}
+  color: ${({ theme }) => theme.colors.blue};
+  background-color: ${({ theme }) => theme.colors.white};
+  border: 1px solid ${({ theme }) => theme.colors.blue};
   transition:background-color 200ms ease-in-out;
 
   &:not(:disabled):hover {
-    background-color: ${({ theme }) => theme.colors.blueLight}
+    background-color: ${({ theme }) => theme.colors.blueLight};
   }
 `
 
 const ghostButtonStyle = css`
-  color: ${({ theme }) => theme.colors.primary}
+  color: ${({ theme }) => theme.colors.primary};
   background-color: transparent;
-  transition:background-color 200ms ease-in-out;
+  transition:200ms ease-in-out;
 
   &:not(:disabled):hover {
-    background-color: ${({ theme }) => theme.colors.secondary}
+    background-color: ${({ theme }) => theme.colors.secondary};
   }
 `
 
@@ -78,8 +78,8 @@ const button55 = css`
   height: 55px;
 `
 
-function setButtonSize(variant: ButtonSize) {
-  switch (variant) {
+function setButtonSize(size: ButtonSize) {
+  switch (size) {
     case 32:
       return button32
     case 40:
