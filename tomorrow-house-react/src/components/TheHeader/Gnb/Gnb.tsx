@@ -1,47 +1,68 @@
-import React from 'react'
+import React, { memo } from 'react'
 import classnames from 'classnames'
 import { StyledGnb, StyledGnbIconButton } from './styles'
 import { Grid } from '../../Grid'
 import { Link } from 'react-router-dom'
-// import {
-//   BookmarkIcon,
-//   Logo,
-//   MenuIcon,
-//   SearchIcon,
-//   BellIcon,
-//   CartIcon,
-//   ChevronIcon,
-// } from 'src/assets/icons/index'
-import { useResponsive } from 'src/hooks'
+import {
+  Logo,
+  MenuIcon,
+  BellIcon,
+  BookmarkIcon,
+  CartIcon,
+  ChevronIcon,
+  SearchIcon,
+} from 'src/assets/icons'
+
+import { useResponsive, useModal } from 'src/hooks'
 import { GnbNav } from 'src/components/TheHeader/Gnb/GnbNav'
 import { GnbSearch } from 'src/components/TheHeader/Gnb/GnbSearch'
 import { Button } from 'src/components/Button/Button'
+import { GnbUserMenu } from 'src/components/TheHeader/Gnb/GnbUserMenu'
+import { ModalCategory } from 'src/types/enum'
 
 interface GnbProps {
   className?: string
 }
 
-export const Gnb: React.FC<GnbProps> = ({ className }) => {
+const Gnb: React.FC<GnbProps> = ({ className }) => {
   // const user = useAppSelector(getUser)
   // const isLoggedIn = user != null
   const { isMobile, isDesktop } = useResponsive()
+  const { addModal } = useModal()
+
+  const openSidebar = () => {
+    addModal({
+      category: ModalCategory.SidebarModal,
+      props: {},
+    })
+  }
+
+  const openSearchModal = () => {
+    addModal({
+      category: ModalCategory.SearchModal,
+      props: {},
+    })
+  }
 
   return (
     <StyledGnb className={classnames('gnb', className)}>
-      <Grid sm={4}>
+      <Grid sm={4} md={12} lg={12}>
         <div className="gnb-wrapper">
           <div className="gnb-left">
             <h1 className="logo">
-              <Link to="/">{/* <Logo /> */}</Link>
+              <Link to="/">
+                <Logo />
+              </Link>
             </h1>
 
-            {!isMobile ? (
+            {isMobile ? (
               <StyledGnbIconButton
                 className="gnb-icon-button menu"
                 type="button"
                 aria-label="메뉴 열기 버튼"
+                onClick={openSidebar}
               >
-                {/* <MenuIcon /> */}
+                <MenuIcon />
               </StyledGnbIconButton>
             ) : (
               <GnbNav />
@@ -57,8 +78,9 @@ export const Gnb: React.FC<GnbProps> = ({ className }) => {
                   className="gnb-icon-button search"
                   type="button"
                   aria-label="검색창 열기 버튼"
+                  onClick={openSearchModal}
                 >
-                  {/* <SearchIcon /> */}
+                  <SearchIcon />
                 </StyledGnbIconButton>
               )}
 
@@ -70,7 +92,7 @@ export const Gnb: React.FC<GnbProps> = ({ className }) => {
                     to="/"
                     aria-label="스크랩북 페이지로 이동"
                   >
-                    {/* <BookmarkIcon /> */}
+                    <BookmarkIcon />
                   </StyledGnbIconButton>
                   <StyledGnbIconButton
                     className="gnb-icon-button"
@@ -78,7 +100,7 @@ export const Gnb: React.FC<GnbProps> = ({ className }) => {
                     to="/"
                     aria-label="내 소식 페이지로 이동"
                   >
-                    {/* <BellIcon /> */}
+                    <BellIcon />
                   </StyledGnbIconButton>
                 </React.Fragment>
               )}
@@ -88,14 +110,16 @@ export const Gnb: React.FC<GnbProps> = ({ className }) => {
                 to="/cart"
                 aria-label="장바구니 페이지로 이동"
               >
-                {/* <CartIcon /> */}
+                <CartIcon />
                 <strong className="badge">5</strong>
               </StyledGnbIconButton>
+
+              {!isMobile && <GnbUserMenu />}
             </div>
             {!isMobile && (
               <Button size={40} variant={'primary'} type="button">
                 글쓰기
-                {/* <ChevronIcon /> */}
+                <ChevronIcon />
               </Button>
             )}
           </div>
@@ -104,3 +128,6 @@ export const Gnb: React.FC<GnbProps> = ({ className }) => {
     </StyledGnb>
   )
 }
+
+const MemoGnb = memo(Gnb)
+export { MemoGnb as Gnb }

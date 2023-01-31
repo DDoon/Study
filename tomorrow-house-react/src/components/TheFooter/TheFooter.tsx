@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import { Grid } from '../Grid'
 import { StyledGlobalFooter } from 'src/components/TheFooter/styles'
-// import { ChevronIcon } from 'src/assets/icons'
+import { ChevronIcon } from 'src/assets/icons'
 
 const TheFooter: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const TheFooter: React.FC = () => {
       <Grid sm={4}>
         <h3 className="global-footer-title">
           고객센터
-          {/* <ChevronIcon /> */}
+          <ChevronIcon className="chevron" />
         </h3>
 
         <a className="global-footer-contact" href="tel:1004-1004">

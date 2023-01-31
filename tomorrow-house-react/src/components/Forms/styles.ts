@@ -34,15 +34,15 @@ export const StyledFormControl = styled.input`
 
 export const StyledFormGroup = styled.div`
   position: relative;
-
   input {
     padding-left: 40px;
+    width: 274px;
   }
 
   .icon {
     ${positionCenterY()};
     ${flexbox()};
-    left: 0;
+    left: 22px;
     width: 40px;
     height: 40px;
     font-size: 20px;
@@ -67,7 +67,7 @@ export const StyledSelectGroup = styled(StyledFormGroup)`
   }
 
   .icon {
-    ${positionCenterY()}
+    ${positionCenterY()};
     right: 8px;
     left: auto;
     font-size: 24px;

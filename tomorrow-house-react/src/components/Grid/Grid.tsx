@@ -8,7 +8,7 @@ type GridProps = ColumnProps & RowProps
 export const Grid: React.FC<GridProps> = ({
   sm,
   md,
-  lg = md,
+  lg,
   alignItems,
   justifyContent,
   children,

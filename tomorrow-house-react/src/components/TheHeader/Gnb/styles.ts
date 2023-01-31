@@ -2,12 +2,12 @@ import styled from 'styled-components'
 
 import {
   flexbox,
-  positionCenter,
-  stripPx,
-  media,
   inlineFlexbox,
-  textStyle,
+  media,
+  positionCenter,
   positionCenterX,
+  stripPx,
+  textStyle,
 } from 'src/styles/utils'
 
 const GNB_ICON_BUTTON_BADGE = `16px`
@@ -18,6 +18,7 @@ export const GNB_HEIGHT_SM = `50px`
 export const GNB_HEIGHT_LG = `80px`
 
 export const StyledGnb = styled.div`
+  position: relative;
   width: 100%;
   height: ${GNB_HEIGHT_SM};
   background-color: ${({ theme }) => theme.colors.white};
@@ -25,24 +26,23 @@ export const StyledGnb = styled.div`
 
   .gnb-wrapper {
     ${flexbox('between')};
-    position: relative;
     width: 100%;
     height: ${GNB_HEIGHT_SM};
   }
 
   .gnb-left {
     .logo {
-      ${positionCenter()}
-    }
+      ${positionCenter()};
 
-    a {
-      display: block;
-    }
+      a {
+        display: block;
+      }
 
-    svg {
-      display: block;
-      width: auto;
-      height: 20px;
+      svg {
+        display: block;
+        width: auto;
+        height: 20px;
+      }
     }
   }
 
@@ -58,32 +58,31 @@ export const StyledGnb = styled.div`
     .gnb-wrapper {
       height: ${GNB_HEIGHT_LG};
     }
-    
     .gnb-left {
       ${flexbox('start')};
 
-      .logo {
-        position: static;
-        padding-right: 32px;
-        transfrom: none;
+        .logo {
+          position: static;
+          padding-right: 32px;
+          transform: none;
 
-        svg {
-          height: 24px;
+          svg {
+            height: 24px;
+          }
         }
       }
-    }
 
-    .gnb-right {
-      ${flexbox('end')};
+      .gnb-right {
+        ${flexbox('end')};
 
-      .button-group {
-        margin-right: 24px;
+        .button-group {
+          margin-right: 24px;
+        }
+
+        .gnb-icon-button {
+          margin-right: 8px;
+        }
       }
-
-      .gnb-icon-button {
-        margin-right: 8px;
-      }
-    }
   `}
 `
 
@@ -157,23 +156,23 @@ export const StyledGnbIconButton = styled.button`
   height: 32px;
   font-size: 24px;
   color: ${({ theme }) => theme.colors.secondary};
-  border-radisus:50%;
+  border-radius: 50%;
   transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  cursor: pointer;
 
   &.menu {
     color: ${({ theme }) => theme.colors.blue};
-    
+
     &:active {
       color: ${({ theme }) => theme.colors.blueDark};
     }
   }
- 
-  
+
   &.cart {
     svg {
       position: relative;
-      top:1px;
-      right:1px;
+      top: 1px;
+      right: 1px;
     }
   }
 
@@ -239,7 +238,7 @@ export const StyledGnbUserMenu = styled.div`
     height: ${GNB_USER_MENU_BUTTON_SIZE};
     overflow: hidden;
     border: 3px solid ${({ theme }) => theme.colors.white};
-    border--radius: 50%;
+    border-radius: 50%;
     transition: border-color 200ms ease-in-out;
 
     &:hover {
@@ -255,7 +254,7 @@ export const StyledGnbUserMenu = styled.div`
   }
 
   .gnb-user-menu-content{
-    ${positionCenterX()}
+    ${positionCenterX()};
     top: ${
       stripPx(GNB_USER_MENU_BUTTON_SIZE) +
       stripPx(GNB_USER_MENU_TOOLTIP_SIZE) +
@@ -270,7 +269,7 @@ export const StyledGnbUserMenu = styled.div`
 
     &::before,
     &::after {
-      ${positionCenterX()}
+      ${positionCenterX()};
       top: ${stripPx(GNB_USER_MENU_TOOLTIP_SIZE) * -2}px;
       display: block;
       width: 0;
@@ -287,7 +286,7 @@ export const StyledGnbUserMenu = styled.div`
     }
 
     &::after {
-      top: ${stripPx(GNB_USER_MENU_TOOLTIP_SIZE) * -2 + 2}px
+      top: ${stripPx(GNB_USER_MENU_TOOLTIP_SIZE) * -2 + 2}px;
       border-bottom-color: ${({ theme }) => theme.colors.white};
     }
 
@@ -304,8 +303,8 @@ export const StyledGnbUserMenu = styled.div`
       button {
         ${flexbox('start')};
         ${textStyle('base')};
-        width:100%;
-        height:44px;
+        width: 100%;
+        height: 44px;
         padding: 0 8px;
         border-radius: 2px;
         color: ${({ theme }) => theme.colors.primary};

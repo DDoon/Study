@@ -21,7 +21,7 @@ export const Lnb: React.FC<LnbProps> = ({ className }) => {
   return (
     <StyledLnb>
       <Grid sm={4}>
-        <h1 className="visually-hidden">스토어 메뉴</h1>
+        <h1 className="visuallyHidden">스토어 메뉴</h1>
 
         <ul>
           {Object.entries(urlMap).map(([url, label]) => {

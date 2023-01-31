@@ -20,7 +20,7 @@ export const StyledContainer = styled.div`
 `
 
 export const StyledColumn = styled.div<ColumnProps>`
-  width: ${({ sm }) => `${(100 / 4) * sm}$`}
+  width: ${({ sm }) => `${(100 / 4) * sm}$`};
   padding: 0 ${({ theme }) => theme.gutter};
 
   ${({ md }) =>
@@ -30,15 +30,12 @@ export const StyledColumn = styled.div<ColumnProps>`
   `}
   ${({ lg }) =>
     lg &&
-    media.greaterThan('tablet')`
+    media.greaterThan('desktop')`
     width: ${(100 / 12) * lg}%;
-  `}  
+  `}
 `
 
 export const StyledRow = styled.div<RowProps>`
-  display: flex;
-  flex-wrap: wrap;
-
   ${({ justifyContent }) =>
     justifyContent && `justify-content: ${justifyContent}`}
   ${({ alignItems }) => alignItems && `align-items: ${alignItems}`}

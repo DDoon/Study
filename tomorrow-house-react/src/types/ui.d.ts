@@ -8,3 +8,8 @@ declare interface SearchHistory {
   content: string
   createdAt: number
 }
+
+declare interface Modal {
+  category: import('./enum').ModalCategory
+  props: any
+}

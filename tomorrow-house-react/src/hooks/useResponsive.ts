@@ -22,7 +22,7 @@ function getResponsive() {
     isMobile = false
     isTablet = true
   }
-  if (innerWidth > stripPx(theme.breakpoints.tablet)) {
+  if (innerWidth > stripPx(theme.breakpoints.desktop)) {
     bp = 'D'
     isTablet = false
     isDesktop = true

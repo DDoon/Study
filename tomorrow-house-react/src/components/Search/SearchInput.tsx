@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent, KeyboardEvent } from 'react'
 import { useRouter } from 'src/hooks/useRouter'
 import { getSearchQueryUrl } from '../utils'
-// import { SearchIcon } from 'src/assets/icons'
+import { SearchIcon } from 'src/assets/icons'
 import { Input } from 'src/components/Forms/Input'
 
 interface SearchInputProps {
@@ -48,8 +48,8 @@ export const SearchInput: React.FC<SearchInputProps> = ({
       onFocus={onFocus}
       onKeyPress={handleEnter}
     >
-      <button>
-        {/* <SearchIcon /> */}
+      <button className="icon" type="button">
+        <SearchIcon />
       </button>
     </Input>
   )

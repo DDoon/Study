@@ -15,9 +15,10 @@ export function positionCenterX(type: PositionType = 'absolute') {
   return css`
     position: ${type};
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
   `
 }
+
 export function positionCenterY(type: PositionType = 'absolute') {
   return css`
     position: ${type};

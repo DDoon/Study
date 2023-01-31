@@ -12,7 +12,7 @@ export const GnbNav = () => {
 
   return (
     <StyledGnbNav className="gnb-nav">
-      <h2 className="visually-hidden">메뉴</h2>
+      <h2 className="visuallyHidden">메뉴</h2>
 
       <ul className="gnb-nav-list">
         {urlList.map((url) => {
