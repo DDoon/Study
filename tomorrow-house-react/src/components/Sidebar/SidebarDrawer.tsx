@@ -57,7 +57,7 @@ export const SidebarDrawer: React.FC<SidebarDrawerProps> = ({
         </>
       </button>
 
-      <div>
+      <div className="drawer-menu-content">
         <ul>
           {Object.entries(urlMap).map(([url, label]) => (
             <li key={`drawer-menu-item-${url}`}>

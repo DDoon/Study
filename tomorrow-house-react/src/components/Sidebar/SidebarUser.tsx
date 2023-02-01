@@ -11,8 +11,7 @@ export const SidebarUser: React.FC<SidebarUserProps> = ({ closeSidebar }) => {
   return (
     <StyledSidebarUser>
       <Link to="/">
-        <Avatar className="avatar" username="나다" />
-        <strong className="username">나다</strong>
+        <strong className="username">박몽구</strong>
       </Link>
     </StyledSidebarUser>
   )

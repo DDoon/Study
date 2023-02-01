@@ -24,22 +24,22 @@ export const StyledSidebar = styled.aside`
   left: 0;
   z-index: ${({ theme }) => theme.levels.sidebarModal};
   width: ${SIDEBAR_WIDTH};
-  height:100vh;
+  height: 100vh;
   padding: 32px 20px;
   overflow-y: auto;
-  background-color: ${({ theme }) => theme.colors.white}
-  overscroll-behavior:contain;
-  animation:${animations.slideFromLeft} 300ms ease-in-out;
+  background-color: ${({ theme }) => theme.colors.white};
+  overscroll-behavior: contain;
+  animation: ${animations.slideFromLeft} 300ms ease-in-out;
 
   &::-webkit-scrollbar {
-    display:none;
+    display: none;
   }
 
   .sidebar-header {
     padding: 0 12px;
 
-    .logo{
-      ${flexbox('start')}
+    .logo {
+      ${flexbox('start')};
 
       a {
         display: block;
@@ -54,17 +54,15 @@ export const StyledSidebar = styled.aside`
   }
 
   .sidebar-user {
-    
   }
 
   .sidebar-auth {
-
   }
 
   .sidebar-nav {
     .drawer-menu {
       border-top: 1px solid ${({ theme }) => theme.colors.border};
-      
+
       &.is-expert {
         border-bottom: 1px solid ${({ theme }) => theme.colors.border};
       }
@@ -73,8 +71,8 @@ export const StyledSidebar = styled.aside`
 `
 
 export const StyledSidebarAuth = styled.div`
-  ${flexbox('between')}
-  height:88px;
+  ${flexbox('between')};
+  height: 88px;
 
   button {
     width: 84px;
@@ -82,13 +80,13 @@ export const StyledSidebarAuth = styled.div`
 `
 
 export const StyledSidebarUser = styled.div`
-  ${flexbox('start')}
+  ${flexbox('start')};
   height: 88px;
 
   a {
-    ${flexbox('start')}
-    ${textStyle('sm')}
-    width:100%;
+    ${flexbox('start')};
+    ${textStyle('sm')};
+    width: 100%;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.primary};
   }
@@ -111,9 +109,9 @@ export const StyledSidebarUserMenu = styled.div`
   li {
     a,
     button {
-      ${flexbox('start')}
-      ${textStyle('sm')}
-      width:100%;
+      ${flexbox('start')};
+      ${textStyle('sm')};
+      width: 100%;
       height: 36px;
       padding: 0 12px;
       color: ${({ theme }) => theme.colors.primary};
@@ -135,13 +133,13 @@ export const StyledSidebarDrawer = styled.div`
 
     &.store {
       .drawer-menu-content {
-        max-height: ${_calculateMaxContentHeight(COMMUNITY_LENGTH)};
+        max-height: ${_calculateMaxContentHeight(STORE_LENGTH)};
       }
     }
 
     &.expert {
       .drawer-menu-content {
-        max-height: ${_calculateMaxContentHeight(COMMUNITY_LENGTH)};
+        max-height: ${_calculateMaxContentHeight(EXPERT_LENGTH)};
       }
     }
 
@@ -178,6 +176,14 @@ export const StyledSidebarDrawer = styled.div`
       top: 1px;
       margin-right: 8px;
       font-size: 24px;
+      color: ${({ theme }) => theme.colors.primary};
+      transition: transform 200ms ease-in-out;
+    }
+
+    .chevron {
+      ${positionCenterY()};
+      right: 8px;
+      font-size: 16px;
       color: ${({ theme }) => theme.colors.primary};
       transition: transform 200ms ease-in-out;
     }

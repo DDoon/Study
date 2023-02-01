@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './globalStyle'
 import { theme } from './styles'
 import { store } from './app/store'
-import { Route, BrowserRouter } from 'react-router-dom'
+import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)

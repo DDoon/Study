@@ -29,7 +29,7 @@ export const Sidebar: React.FC = () => {
       </header>
 
       <nav className="sidebar-nav">
-        <h2 className="visually-hidden">메뉴</h2>
+        <h2 className="visuallyHidden">메뉴</h2>
         <SidebarDrawer
           urlMap={navMap.community}
           category="community"
