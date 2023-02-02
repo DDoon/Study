@@ -28,6 +28,7 @@ export const StyledSidebar = styled.aside`
   padding: 32px 20px;
   overflow-y: auto;
   background-color: ${({ theme }) => theme.colors.white};
+  transition: transform 300ms ease-in-out;
   overscroll-behavior: contain;
   animation: ${animations.slideFromLeft} 300ms ease-in-out;
 
