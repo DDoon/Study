@@ -1,10 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 
 import modal from './modal'
-
+import toast from './toasts'
 export const store = configureStore({
   reducer: {
     modal,
+    toast,
   },
 })
 
