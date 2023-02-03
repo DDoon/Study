@@ -36,7 +36,7 @@ const TheFooter: React.FC = () => {
           </div>
           <div>
             <dt>대표이사</dt>
-            <dd>김버그</dd>
+            <dd>박성빈</dd>
           </div>
           <div>
             <dt>주소</dt>

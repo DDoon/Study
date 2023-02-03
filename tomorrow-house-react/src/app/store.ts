@@ -2,10 +2,16 @@ import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 
 import modal from './modal'
 import toast from './toasts'
+
+import productDetail from './product/detail'
+import productCheckout from './product/checkout'
+
 export const store = configureStore({
   reducer: {
     modal,
     toast,
+    productDetail,
+    productCheckout,
   },
 })
 
