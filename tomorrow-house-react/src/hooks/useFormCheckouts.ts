@@ -16,8 +16,8 @@ export const useFormCheckouts = () => {
     const extraMatch = extraOptions.find((option) => option.id === value)
 
     return {
-      label: extraMatch?.explain,
-      sellingCost: extraMatch?.sellingCost,
+      label: extraMatch.explain,
+      sellingCost: extraMatch.sellingCost,
     }
   }
 
