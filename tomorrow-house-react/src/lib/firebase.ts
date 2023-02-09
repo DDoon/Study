@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getAnalytics } from 'firebase/analytics'
+import { getDatabase } from 'firebase/database'
 
 const config = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -12,6 +12,6 @@ const config = {
 }
 
 const app = initializeApp(config)
-export const database = getAnalytics(app)
+export const database = getDatabase()
 
 export default app

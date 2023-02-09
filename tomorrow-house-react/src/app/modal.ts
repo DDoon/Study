@@ -38,3 +38,4 @@ export const { setModal, deleteModal, resetModal } = modalSlice.actions
 export default modalSlice.reducer
 
 export const getModals = (state: RootState) => state.modal.modals
+inter
